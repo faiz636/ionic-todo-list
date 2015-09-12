@@ -3,8 +3,8 @@
  */
 angular.module('starter')
 .service("dataService",function(){
-    var todoList = [  {text: "todo", checked: false}  ];
-    var doneList = [  {text: "done", checked: true} ];
+    var todoList = [];//  {text: " todo ", checked: false}  ];
+    var doneList = [];//  {text: "done", checked: true} ];
     this.getTodoList = function(){
       return todoList;
     };
