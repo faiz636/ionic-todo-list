@@ -1,0 +1,11 @@
+<ion-content>
+  <ion-list>
+    <ion-item ng-repeat="item in list" class="item item-checkbox">
+      {{item.text}}
+      <a class="button button-icon icon ion-close-round"></a>
+      <label class="checkbox">
+        <input type="checkbox" ng-checked="item.checked">
+      </label>
+    </ion-item>
+  </ion-list>
+</ion-content>
