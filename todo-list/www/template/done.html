@@ -1,10 +1,10 @@
 <ion-content>
   <ion-list>
-    <ion-item ng-repeat="item in list" class="item item-checkbox">
-      {{item.text}}
-      <a class="button button-icon icon ion-close-round"></a>
-      <label class="checkbox">
-        <input type="checkbox" ng-checked="item.checked">
+    <ion-item ng-repeat="item in list" class="item" style="padding-top: 0px !important;padding-bottom: 0px !important;">
+      <span style="position: absolute; padding-top: 10px">{{item.text}}</span>
+      <a class="button button-icon icon ion-close-round" style="float: right" ng-click="delClick(item)"></a>
+      <label class="checkbox" style="float: right">
+        <input type="checkbox" ng-checked="item.checked" ng-click="checkClick(item)">
       </label>
     </ion-item>
   </ion-list>

@@ -1,9 +1,17 @@
 <ion-content>
+  <div class="item item-input-inset">
+    <label class="item-input-wrapper">
+      <input type="text" placeholder="New Task" ng-model="task" ng-init="task = ''">
+    </label>
+    <button class="button button-small" ng-click="addTask()">
+      Submit
+    </button>
+  </div>
   <ion-list>
-    <ion-item ng-repeat="item in list" class="item item-checkbox">
-      {{item.text}}
-      <a class="button button-icon icon ion-close-round"></a>
-      <label class="checkbox">
+    <ion-item ng-repeat="item in list" class="item" style="padding-top: 0px !important;padding-bottom: 0px !important;">
+      <span style="position: absolute; padding-top: 10px">{{item.text}}</span>
+      <a class="button button-icon icon ion-close-round" style="float: right" ng-click="delClick(item)"></a>
+      <label class="checkbox" style="float: right"  ng-click="checkClick(item)">
         <input type="checkbox" ng-checked="item.checked">
       </label>
     </ion-item>
